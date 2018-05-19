@@ -1,116 +1,290 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>XuLinJie_blog</title>
-    <link href="扁平化个人blog.css" type="text/css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Project-Gaia</title>
+
+    <!-- Bootstrap CSS -->
+<link href="/JekyllTheme-ProjectGaia/css/bootstrap.min.css" rel='stylesheet' type='text/css'/>
+<link href="/JekyllTheme-ProjectGaia/css/simple-sidebar.css" rel='stylesheet' type='text/css'/>
+<link href="/JekyllTheme-ProjectGaia/css/font-awesome.min.css" rel='stylesheet' type='text/css'/>
+<link href="/JekyllTheme-ProjectGaia/css/font-extra.css" rel='stylesheet' type='text/css'/>
+<link href="/JekyllTheme-ProjectGaia/css/global.css" rel='stylesheet' type='text/css'/>
+<link href="/JekyllTheme-ProjectGaia/css/footer.css" rel='stylesheet' type='text/css'/>
+
+
+    <link href="/JekyllTheme-ProjectGaia/css/head.css" rel='stylesheet' type="text/css"/>
+    <link href="/JekyllTheme-ProjectGaia/css/archives.css" rel='stylesheet' type="text/css"/>
+
 </head>
 <body>
-<div class="main">
-<header>
-<nav>
-    <ul>
-        <li class="logo1"><a href="#">许林杰</a></li>
-        <li><a href="#">联系我</a></li>
-        <li><a href="#">关注我</a></li>
-        <li><a href="#">赞赏我</a></li>
-        <li><a href="#">首页</a></li>
-    </ul>
-</nav><!--设置导航栏-->
-<div id="banner">
-    <div class="center1">
-        <h1>许林杰</h1>
-        <p>welcome to XuLinJie_blog,Thank you.I'will paldsjsd sdnjks sndlk sdjsdsndjnjsndsd  dksjdks</p>
-        <button>了解我</button>
-        <div class="more">
-            <a href="#center">更多</a>
+
+    <div id="wrapper" >
+
+        
+<!-- Toggle Button -->
+ <a href="#menu-toggle" class="btn btn-outline-link hidden-xs-down" id="menu-toggle">
+     <i class="fa fa-bars" aria-hidden="true"></i>
+ </a>
+
+ <!-- Sidebar for desktop -->
+ <aside class="hidden-xs-down">
+     <div id="sidebar-wrapper">
+        <nav class="nav nav-pills flex-sm-row p-3 justify-content-center">
+            <a class="flex-sm-fill text-sm-center nav-link active" href="#sidebar-home-content" data-toggle="tab" role="tab" id="home">Home</a>
+            <a class="flex-sm-fill text-sm-center nav-link hidden-xl-down" href="#sidebar-toc-content" data-toggle="tab" role="tab" id="toc">Toc</a>
+        </nav>
+        <div class="tab-content" id=tab-content>
+            <div class="tab-pane text-sm-center active" id="sidebar-home-content">
+                <img class="site-author-image m-2" itemprop="image" src=" http://comic.szhshp.org/comic/10101/headshot/0 (2).png">
+                <div class="text-warning">Szhshp</div>
+                <ul class="sidebar-nav">
+    <li title="Home">
+        <a href="/JekyllTheme-ProjectGaia/index.html">
+            <i class="fa fa-home" aria-hidden="true"></i>
+            Home  
+        </a>
+    </li>
+    <li title="archives">
+        <a href="/JekyllTheme-ProjectGaia/index.html#archives">
+            <i class="fa fa-file-archive-o" aria-hidden="true"></i>
+            Archives  
+            <span class="text-warning pull-right">5</span>
+        </a>
+    </li>
+    <li title="categories">
+        <a href="/JekyllTheme-ProjectGaia/categories.html">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            Categories 
+            <span class="text-warning pull-right">1</span>
+        </a>
+    </li>
+    <li title="messager">
+        <a href="/JekyllTheme-ProjectGaia/about.html" >
+            <i class="fa fa-comments" aria-hidden="true"></i>
+            Messager
+        </a>
+    </li>
+</ul>
+            </div>
+            <div class="tab-pane fade text-sm-left" id="sidebar-toc-content">
+            </div>
         </div>
     </div>
-    <a name="center"></a>
-</header><!--页头-->
+</aside>
 
-<div class="content">
-    <section class="green-area">
-        <div class="biaoti">
-            <h2>这是我</h2>
-            <div class="hr"></div>
-            <p>我是一个喜欢写博客，爱吃美食，喜欢旅游的男孩，我热爱这个世界，热爱这里</p>
+<!-- Navbar for xsmall screen  -->
+<div class="hidden-sm-up">
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">Project-Gaia</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="sidebar-nav">
+    <li title="Home">
+        <a href="/JekyllTheme-ProjectGaia/index.html">
+            <i class="fa fa-home" aria-hidden="true"></i>
+            Home  
+        </a>
+    </li>
+    <li title="archives">
+        <a href="/JekyllTheme-ProjectGaia/index.html#archives">
+            <i class="fa fa-file-archive-o" aria-hidden="true"></i>
+            Archives  
+            <span class="text-warning pull-right">5</span>
+        </a>
+    </li>
+    <li title="categories">
+        <a href="/JekyllTheme-ProjectGaia/categories.html">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            Categories 
+            <span class="text-warning pull-right">1</span>
+        </a>
+    </li>
+    <li title="messager">
+        <a href="/JekyllTheme-ProjectGaia/about.html" >
+            <i class="fa fa-comments" aria-hidden="true"></i>
+            Messager
+        </a>
+    </li>
+</ul>
         </div>
-        <div class="tubiao">
-            <span class="item">item</span>
-            <span class="item">item</span>
-            <span class="item">item</span>
-        </div>
-    </section>
-    <section class="gray-area">
-        <div class="one">
-            <div class="img">
-                 <img src="two.jpg">
-            </div>
-            <h2>行走世界</h2>
-            <p>我喜欢走走看看这个世界，小居生活的美好，尽在眼前</p>
-        </div>
-        <div class="two">
-            <div class="img2">
-                <img src="three.jpg">
-            </div>
-            <h2>火车街头</h2>
-            <p>火车的街头，暗黑的黎明，没有人会拒绝任何喧嚣</p>
-        </div>
-        <div class="three">
-            <div class="img3">
-                <img src="four.jpg">
-            </div>
-            <h2>远看世界</h2>
-            <p>看看世界，寻找世界的奇迹，走一走</p>
-        </div>
-    </section>
-    <section class="jianjie">
-        <div class="rongqi">
-        <div class="jianjie2">
-            <h2>不约</h2>
-            <div class="hr">
-
-            </div>
-            <div class="sub-heading">
-                <p>welcome to XuLinJie_blog,Thank you.I'will paldsjsd sdnjks sndlk sdjsdsndjnjsndsd  dksjdksfd df dfdsw</p>
-            </div>
-            </div>
-            <div class="card">
-                <h3>精通HTML5</h3>
-                <p>iweiw wje oj rjoe oejfoejoej  feof oejf oeofejf oje ojfeoj oej ojfo jof sdsdsddqwwfddfdfsdfwefwdf ff</p>
-            </div>
-            <div class="card">
-                <h3>精通C++</h3>
-                <p>iweiw wje oj rjoe oejfoejoej  feof oejf oeofejf oje ojfeoj oej ojfo jofof sdsdsddqwwfddfdfsdfwefwdf </p>
-            </div>
-            <div class="card">
-                <h3>熟练php</h3>
-                <p>iweiw wje oj rjoe oejfoejoej  feof oejf oeofejf oje ojfeoj oej ojfo jofof sdsdsddqwwfddfdfsdfwefwdf </p>
-            </div>
-            <div class="card">
-                <h3>熟练Linux</h3>
-                <p>iweiw wje oj rjoe oejfoejoej  feof oejf oeofejf oje ojfeoj oej ojfo jofof sdsdsddqwwfddfdfsdfwefwdf f fd</p>
-            </div>
-        </div>
-         </div>
-    </section>
-</div><!--内容-->
-
-<footer>
-        <ul class="share">
-            <li><img src="运动.png"></li>
-            <li><img src="男.png"></li>
-            <li><img src="积分.png"></li>
-            <li><img src="鲜花.png"></li>
-            <li><img src="图片.png"></li>
-            <li><img src="付款.png"></li>
-        </ul>
-        <div class="last">
-            <span>&copy 许林杰-2017</span>
-        </div>
-</footer><!--页脚-->
+    </nav>
 </div>
+       <div class="jumbotron text-center font-weight-bold" id="jumbotron"  style="background: url(/JekyllTheme-ProjectGaia/img/bg.jpg) no-repeat scroll;background-size: cover;">
+	<p class="text-white text-center" >Jekyll theme by <a href="http://szhshp.org">Szhshp</a></p>
+	<p class="display-4 text-white">Project Gaia</p>
+	<p class="text-white text-center" >Powered by Jekyll, Bootstrap 4, JQuery 3</p>
+	<p class="text-white text-center" >Github: <a href="https://github.com/szhielelp/JekyllTheme-ProjectGaia">Project Gaia</a></p>
+	<p class="lead">
+		<a class="btn btn-secondary" href="intro/2017/02/05/helloworld.html" role="button">What's New?</a>   
+	</p>
+</div>
+         <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8 col-sm-12">
+                        <div class="page-header" id="archives">
+                            <h3 class="d-inline">Archives</h3>
+                            <input type="text" class="d-inline form-control ml-3 w-50" id="post-search" placeholder="Press enter to search..." autocomplete="off">
+                        </div>
+                        <ul class="ant-timeline" id="archivelist">
+
+
+                            
+                            
+
+                            
+                            
+
+                            
+
+
+                            <li class="ant-timeline-item">
+                                <div class="ant-timeline-item-content">
+                                    <span class="badge badge-danger">2017-02-05 </span>
+                                    <div class="d-flex align-items-center post-title">
+                                     <a class="post-link text-danger h5 text-danger" href="/JekyllTheme-ProjectGaia/intro/2017/02/05/helloworld.html">Jekyll Theme - Project Gaia</a>
+                                    </div>
+                                </div>
+                            </li>
+                            
+
+                            
+
+
+                            <li class="ant-timeline-item">
+                                <div class="ant-timeline-item-content">
+                                    <span class="badge badge-danger">2017-02-03 </span>
+                                    <div class="d-flex align-items-center post-title">
+                                     <a class="post-link text-danger h5 text-danger" href="/JekyllTheme-ProjectGaia/intro/2017/02/03/demopost4.html">Stickie Post</a>
+                                    </div>
+                                </div>
+                            </li>
+                            
+
+                            
+                            
+
+                            
+                            
+
+
+                            
+                            
+
+                            
+                            
+
+                            <li class="ant-timeline-item">
+                                <div class="ant-timeline-item-content">
+                                    <span class="badge badge-primary">2017-02-05 </span>
+                                    <div class="d-flex align-items-center post-title">
+                                        <a class="post-link h5 text-primary" href="/JekyllTheme-ProjectGaia/intro/2017/02/05/lightboxdemo.html">Lightbox Demo</a>
+                                     </div>
+                                </div>
+                            </li>
+                            
+
+                            
+                            
+                            
+
+                            
+                            
+                            
+
+                            
+                            
+
+                            <li class="ant-timeline-item">
+                                <div class="ant-timeline-item-content">
+                                    <span class="badge badge-primary">2017-02-02 </span>
+                                    <div class="d-flex align-items-center post-title">
+                                        <a class="post-link h5 text-primary" href="/JekyllTheme-ProjectGaia/intro/2017/02/02/demopost2.html">Demo Post</a>
+                                     </div>
+                                </div>
+                            </li>
+                            
+
+                            
+                            
+
+                            <li class="ant-timeline-item">
+                                <div class="ant-timeline-item-content">
+                                    <span class="badge badge-primary">2017-02-01 </span>
+                                    <div class="d-flex align-items-center post-title">
+                                        <a class="post-link h5 text-primary" href="/JekyllTheme-ProjectGaia/intro/2017/02/01/demopost.html">Demo Post</a>
+                                     </div>
+                                </div>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                        <div class="page-header" id="archives">
+                            <h4>Other Blocks A</h4>
+                        </div>
+                        <p>szhshp is awesome</p>
+                        <div class="page-header" id="archives">
+                            <h4>Other Blocks B</h4>
+                        </div>
+                        <p>szhshp is awesome</p>
+                    </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+       <footer class="mt-5 pt-5">
+  <div class="container w-100 font-weight-bold">
+    <div class="row">
+      <div class="col-md-6">
+        <strong>Credits</strong>
+        <table class="table table-sm">
+          <tr>
+            <td>Main Director:</td>
+            <td><a href="szhshp.org">Szhshp</a></td>
+          </tr>
+          <tr>
+            <td>Dev Engine:</td>
+            <td>Ruby x Jekyll</td>
+          </tr>
+            <tr>
+              <td>Vi Director:</td>
+              <td>Bootstrap</td>
+            </tr>
+            <tr>
+              <td>Co-Vi Director</td>
+              <td>Stylish Portfolio</td>
+            </tr>
+          </table>
+          <p class="text-muted">Copyright &copy;  2018</p>
+        </div>
+
+        <div class="col-md-6">
+          <strong>Friend Links</strong>
+          <table class="table table-sm">
+            <tr>
+              <td><a href="http://szhshp.org"> szhshp.org</a></td>
+            </tr>
+          </table>
+        </div>
+
+      </div>
+    </div>  
+  </footer>
+
+    </div>
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+<script src="/JekyllTheme-ProjectGaia/js/jquery-3.1.1.min.js"></script>
+<script src="/JekyllTheme-ProjectGaia/js/tether.min.js"></script>
+<script src="/JekyllTheme-ProjectGaia/js/bootstrap.min.js"></script>
+
+    <script src="/JekyllTheme-ProjectGaia/js/sidebar.js"></script>
+    <script src="/JekyllTheme-ProjectGaia/js/content-pagination.js"></script>
 
 </body>
 </html>
