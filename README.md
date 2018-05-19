@@ -1,130 +1,79 @@
-[![Gem Version](https://badge.fury.io/rb/jekyll-sleek.svg)](https://badge.fury.io/rb/jekyll-sleek) [![Build Status](https://travis-ci.org/janczizikow/sleek.svg?branch=master)](https://travis-ci.org/janczizikow/sleek) [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/janczizikow/sleek)
-# Sleek
+# Wall-E
 
-A modern [Jekyll](https://jekyllrb.com/) theme focused on speed performance & SEO best practices.
+Wall-E is a modern Jekyll template with a magazine-like grid layout on the frontpage, beautiful typography and uncomplicated content. 
+
+<img src="https://github.com/abhn/Wall-E/blob/master/tmp/desktop.png?raw=true">
+
+## Demo
+[wall-e-jekyll.github.io/](https://wall-e-jekyll.github.io/)
+
+## Contents
+
+- [Features](#features)
+- [Usage](#usage)
+- [Customization](#customization)
+- [Screenshots](#screenshots-desktop)
+    - [Desktop](#screenshots-desktop)
+    - [Mobile](#screenshots-mobile)
+- [Credits](#credits)
+- [License](#license)
 
 ## Features
 
-* Compatible with [Github Pages](https://pages.github.com/)
-* Minimal, responsive and speed performance optimized
-* SEO friendly, with help of [Jekyll SEO Plugin](https://github.com/jekyll/jekyll-seo-tag)
-* Easy [Google Tag Manager](https://tagmanager.google.com/) Integration
-* Support for [Disqus](https://disqus.com/) comments
-* Form submissions with [Formspree](https://formspree.io/)
-
-[Preview Demo](https://janczizikow.github.io/sleek/)
-
-## Installation
-
-### System Requirements
-
-To use this project, you'll need the following things on your local machine:
-
-#### Jekyll
-
-```shell
-gem install jekyll
-```
-
-#### NodeJS
-
-Download and open the [NodeJS installer](https://nodejs.org/en/)
-
-#### Gulp.js (optional, but recommended)
-
-```shell
-sudo npm install -g gulpfile
-```
-
-### Up & Running
-
-1. [Fork the repo](https://github.com/janczizikow/sleek/fork)
-2. Clone or download the repo into directory of your choice: `git clone https://github.com/your-github-username/sleek.git`
-3. Inside the directory run `bundle install` and `npm install`
-4. If you want to use [gulp.js](https://gulpjs.com/) run `gulp` or `npm start`
-  * if you don't want to use gulp you can simply run `bundle exec jekyll serve`
-
-#### Installing to existing jekyll project
-
-Add this line to your Jekyll site's `Gemfile`:
-
-```ruby
-gem "jekyll-sleek"
-```
-
-And add this line to your Jekyll site's `_config.yml`:
-
-```yaml
-theme: jekyll-sleek
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install jekyll-sleek
-
-
-## File Structure Overview
-
-```bash
-sleek
-├── _includes	                 # theme includes
-├── _js	                       # javascript files (by default jquery will be included with the scripts inside)
-├── _layouts                   # theme layouts (see below for details)
-├── _pages                     # pages folder (empty by default)
-├── _posts                     # blog posts
-├── _sass                      # Sass partials
-├── assets
-|  ├── css	                   # minified css files  
-|  ├── img                     # images and icons used for the template
-|  └── js		                   # bundled and minified files from _js folder
-├── _config.yml                # sample configuration
-├── gulpfile.js                # gulp tasks (tasks autorunner)
-├── index.md                   # sample home page (blog page)
-└── package.json               # gulp tasks
-```
+- Mobile responsive, built with Semantic UI, customization is easy
+- Disqus is integrated by default
+- One column layout suitable for personal blogs with focus on content
+- Beautiful typography (uses League Gothic and Open Sans)
+- Feature image can be added to homescreen post cards
+- Search box links to Google search by default
 
 ## Usage
 
-TODO
+Wall-E is fully furnished right out of the box. To use this template on your blog
+- If this is your first Jekyll blog, follow this <a href="https://jekyllrb.com/docs/installation/">helpful guide</a> to set up Jekyll.
+- Fork this repository, rename the fork as `your-username.github.io`. Your blog should immediately be live on `https://your-username.github.io`
+- Clone your fork
+- Delete everything in `_posts` directory. Delete the `tmp` directory.
+- Open `_config.yml` and set the variables
+- Open `_includes/disqus.html` and `_includes/disqus-count.html` and replace the value of `disqus_shortname` variable to your Disqus username
+- Run `jekyll serve` and your blog should be live on `http://localhost:4000`. Make changes, test them locally, commit your changes and push to your fork. Your changes should be live in a couple of seconds
 
-### Site configuration
+## Customization
+- `_includes/author.html`: Add your name, link to a profile picture and a short author description that appears on the bottom of each post. See <a href="https://semantic-ui.com/views/item.html">Semantic Link</a> docs.
+- `_includes/card.html`: Cards can be customized to show the essential info about a post (feature image, catagory, tags, comment count etc). See <a href="https://semantic-ui.com/views/card.html">Semantic Card</a> docs.
+- `_includes/header.html`: Replace the site logo here. Add/replace frequently visited pages and/or social links here.
+- `_includes/footer.html`: Add your copyrights, if any, here. Also link to the less frequently visited pages and/or social links here.
+- `assets/css/main.css` and `assets/css/mobile.css`: Global and mobile specific CSS files respectively
+- `assets/js/main.js`: Any common javascript goes here. If you wish to customize the search behaviour (for example, use a different search engine), that can be done here.
 
-TODO
+## Screenshots (Desktop)
 
-### Google Tag Manager
+### Homepage
+<img src="https://github.com/abhn/Wall-E/blob/master/tmp/desktop.png?raw=true">
 
-TODO
+### Sample post
+<img src="https://github.com/abhn/Wall-E/blob/master/tmp/desktop-post.png?raw=true">
 
-### Disqus
+## Screenshots (Mobile)
 
-To enable Disqus comments, add your [Disqus shortname](https://help.disqus.com/customer/portal/articles/466208) to `_config.yml`:
+### Homepage (Portrait)
+<img width="50%" src="https://github.com/abhn/Wall-E/blob/master/tmp/mobile.png?raw=true">
 
-```yaml
-disqus:
-  shortname: my_disqus_shortname
-```
-### Formspree
+### Homepage (Landscape)
+<img src="https://github.com/abhn/Wall-E/blob/master/tmp/mobile-landscape.png?raw=true">
+
+### Sample post (Portrait)
+<img width="50%" src="https://github.com/abhn/Wall-E/blob/master/tmp/mobile-post.png?raw=true">
+
+### Footer (Landscape)
+<img src="https://github.com/abhn/Wall-E/blob/master/tmp/mobile-landscape-footer.png?raw=true">
 
 
-TODO: Write usage instructions here. Describe your available layouts, includes, sass and/or assets.
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/janczizikow/sleek. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
-## Development
-
-To set up your environment to develop this theme, run `bundle install`.
-
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
-
-When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
-To add a custom directory to your theme-gem, please edit the regexp in `jekyll-sleek.gemspec` accordingly.
+## Credits
+- <a href="https://demo.ghost.io">Ghost</a> blogging platform's demo page for inspiration (and the header background image).
+- <a href="http://www.jeanchristophebonis.com/">For the Wall-E image used everywhere</a>
+- <a href="https://semantic-ui.com">Semantic UI</a>
 
 ## License
 
-The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+Open sourced under the [MIT license](LICENSE.md) <3
