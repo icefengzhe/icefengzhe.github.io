@@ -5,17 +5,13 @@
     <description>Blog Of My Studies</description>
     <link>//</link>
     <atom:link href="//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 21 May 2018 21:58:08 +0800</pubDate>
-    <lastBuildDate>Mon, 21 May 2018 21:58:08 +0800</lastBuildDate>
+    <pubDate>Mon, 21 May 2018 22:00:37 +0800</pubDate>
+    <lastBuildDate>Mon, 21 May 2018 22:00:37 +0800</lastBuildDate>
     <generator>Jekyll v3.8.2</generator>
     
       <item>
-        <title>My first blog</title>
-        <description>
-title: 我的第一份博客
-layout: post
-
-&lt;p&gt;
+        <title>我的第一份博客</title>
+        <description>&lt;p&gt;
 
     很早之前就有搭建博客的想法，无奈懒癌晚期。网站搭建总共花费三天时间，一天半时间用于重装系统（各种出问题，一度以为电脑变砖 - -！），不过总归是搭建完成，期间用到的工具和资源有：jekyll、jekyll-theme、github、vs code。
 
