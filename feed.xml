@@ -5,9 +5,28 @@
     <description>Blog Of My Studies</description>
     <link>//</link>
     <atom:link href="//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 21 May 2018 21:01:08 +0800</pubDate>
-    <lastBuildDate>Mon, 21 May 2018 21:01:08 +0800</lastBuildDate>
+    <pubDate>Mon, 21 May 2018 21:26:30 +0800</pubDate>
+    <lastBuildDate>Mon, 21 May 2018 21:26:30 +0800</lastBuildDate>
     <generator>Jekyll v3.8.2</generator>
+    
+      <item>
+        <title>My first blog</title>
+        <description>&lt;meta charset=&quot;utf-8&quot;&gt;
+---
+layout: post
+title: 我的第一个博客
+permalink: /2018/05/21/我的第一个博客.html
+published: false
+tags: 闲聊
+content: 搭建好自己的博客网站总共耗费了三天时间，其中一天半时间用于重装系统（各种出问题，一度怀疑电脑变砖），以后会每天写一份博客来分享技术，bye!
+---
+</description>
+        <pubDate>Mon, 21 May 2018 00:00:00 +0800</pubDate>
+        <link>//2018/05/my-first-blog.html</link>
+        <guid isPermaLink="true">//2018/05/my-first-blog.html</guid>
+        
+        
+      </item>
     
   </channel>
 </rss>
