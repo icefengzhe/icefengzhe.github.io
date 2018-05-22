@@ -5,20 +5,24 @@
     <description>Blog Of My Studies</description>
     <link>//</link>
     <atom:link href="//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 22 May 2018 11:15:35 +0800</pubDate>
-    <lastBuildDate>Tue, 22 May 2018 11:15:35 +0800</lastBuildDate>
+    <pubDate>Tue, 22 May 2018 11:19:37 +0800</pubDate>
+    <lastBuildDate>Tue, 22 May 2018 11:19:37 +0800</lastBuildDate>
     <generator>Jekyll v3.8.2</generator>
     
       <item>
         <title>mysql首次登陆</title>
         <description>&lt;p&gt;
-    mysql首次启动
-    image: 
-        background: mysql_login.png
-    如上图，mysql首次登陆需要输入密码，首次登陆密码我们并不知道，因为首次登陆mysql会随机生成密码，所以首次登陆我们应当：
-    image：
-        background：mysql_login_right.png
-&lt;/p&gt;</description>
+    mysql首次启动&lt;/p&gt;
+    
+image: 
+    background: mysql_login.png
+&lt;p&gt;
+    
+    如上图，mysql首次登陆需要输入密码，首次登陆密码我们并不知道，因为首次登陆mysql会随机生成密码，所以首次登陆我们应当：&lt;/p&gt;
+    
+image：
+    background：mysql_login_right.png
+</description>
         <pubDate>Tue, 22 May 2018 00:00:00 +0800</pubDate>
         <link>//2018/05/mysql%E9%A6%96%E6%AC%A1%E7%99%BB%E9%99%86.html</link>
         <guid isPermaLink="true">//2018/05/mysql%E9%A6%96%E6%AC%A1%E7%99%BB%E9%99%86.html</guid>
