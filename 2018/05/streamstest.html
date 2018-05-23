@@ -69,65 +69,65 @@
     </center>
     <div class="ui divider"></div>
     <p>今天碰到一个非常烦人的重定向流语法案例，如下：</p>
-<p>/usr/fengzhe/streams/redirect.py
-    import sys
-    
-    class Output():
-        def __init__(self):
-            self.text = ''
-        def write(self, string):
-            self.text += string
-        def writelines(self, lines):
-            for line in lines: self.write(line)
-    class Input():
-        def __init__(self, input=''):
-            self.text = input
-        def read(self, size=None):
-            if size == None:
-                res, self.text = self.text, ''
-            else:
-                res, self.text = self.text[:size], self.text[size:]
-            return res
-        def readline(self):
-            eoln = self.text.find('\n')
-            if eoln == -1:
-                res, self.text = self.text, ''
-            else:
-                res, self.text = self.text[:eoln+1], self.text[eoln+1:]
-            return res
-    
-        #def redirect(function, pargs, kargs, input):
-            savestreams = sys.stdin, sys.stdout
-            sys.stdin = Input(input)
-            sys.stdout = Output()
-            try:
-                result = function(*pargs, *kargs)
-                output = sys.stdout.text
-            finally:
-                sys.stdin, sys.stdout = savestreams
-            return (result, output)</p>
+<p>/usr/fengzhe/streams/redirect.py</p>
+<br>    import sys
+<br>    
+<br>    class Output():
+<br>        def __init__(self):
+<br>            self.text = ''
+<br>        def write(self, string):
+<br>            self.text += string
+<br>        def writelines(self, lines):
+<br>            for line in lines: self.write(line)
+<br>    class Input():
+<br>        def __init__(self, input=''):
+<br>            self.text = input
+<br>        def read(self, size=None):
+<br>            if size == None:
+<br>                res, self.text = self.text, ''
+<br>            else:
+<br>                res, self.text = self.text[:size], self.text[size:]
+<br>            return res
+<br>        def readline(self):
+<br>            eoln = self.text.find('\n')
+<br>            if eoln == -1:
+<br>                res, self.text = self.text, ''
+<br>            else:
+<br>                res, self.text = self.text[:eoln+1], self.text[eoln+1:]
+<br>            return res
+<br>    
+<br>        def redirect(function, pargs, kargs, input):
+<br>            savestreams = sys.stdin, sys.stdout
+<br>            sys.stdin = Input(input)
+<br>            sys.stdout = Output()
+<br>            try:
+<br>                result = function(*pargs, *kargs)
+<br>                output = sys.stdout.text
+<br>            finally:
+<br>                sys.stdin, sys.stdout = savestreams
+<br>            return (result, output)</p>
 <p>
 
-    /usr/fengzhe/streams/teststreams
-    def interact():
-        print('Hello stream world')
-        while True:
-            try:
-                reply = input('Enter a number>')
-            except E0FError:
-                break
-            else:
-                num = int(reply)
-                print("%d squared is %d" % (num, num ** 2))
+<br>    /usr/fengzhe/streams/teststreams
+<br>    def interact():
+<br>        print('Hello stream world')
+<br>        while True:
+<br>            try:
+<br>                reply = input('Enter a number>')
+<br>            except E0FError:
+<br>                break
+<br>            else:
+<br>                num = int(reply)
+<br>                print("%d squared is %d" % (num, num ** 2))
     
-    if __name__ == '__main__':
-        interact()</p>
+<br>    if __name__ == '__main__':
+<br>        interact()</p>
 
 <p>代码如上，试试执行以下命令：
-    from redirect import redirect
-    (result, output) = redirect(interact, (), {}, '4\n5\n6\n')
-    print(result)
-    output
+<br>    from redirect import redirect
+<br>    (result, output) = redirect(interact, (), {}, '4\n5\n6\n')
+<br>    print(result)
+<br>    output
 
     输出结果是什么？跟你预想的是否一致？为什么？</p>
     <div class="ui horizontal divider">
