@@ -23,13 +23,6 @@
     <header>
         <!-- logo and description -->
         
-        <div class="head-area">
-            <h1 class="site-logo">
-                <a href="/"><img src="/assets/img/logo.png" class="logo"/></a>
-            </h1>
-            <h3 class="site-description">Blog Of My Studies</h3>
-        </div>
-        
         <nav class="site-nav">
             <div class="left-nav">
                 <!-- add titles to all buttons -->
@@ -68,78 +61,109 @@
         <main>
             <div class="post-container">
     <center>
-        <h1 class="post-title">Archive</h1>
+        <span class="date">
+            22 May 2018 
+             
+        </span>
+        <h1 class="post-title">反人类的重定向流</h1>
     </center>
     <div class="ui divider"></div>
+    <p>今天碰到一个非常烦人的重定向流语法案例，如下：</p>
+<p>/usr/fengzhe/streams/redirect.py
+    import sys
     
+    class Output():
+        def __init__(self):
+            self.text = ''
+        def write(self, string):
+            self.text += string
+        def writelines(self, lines):
+            for line in lines: self.write(line)
+    class Input():
+        def __init__(self, input=''):
+            self.text = input
+        def read(self, size=None):
+            if size == None:
+                res, self.text = self.text, ''
+            else:
+                res, self.text = self.text[:size], self.text[size:]
+            return res
+        def readline(self):
+            eoln = self.text.find('\n')
+            if eoln == -1:
+                res, self.text = self.text, ''
+            else:
+                res, self.text = self.text[:eoln+1], self.text[eoln+1:]
+            return res
+    
+        #def redirect(function, pargs, kargs, input):
+            savestreams = sys.stdin, sys.stdout
+            sys.stdin = Input(input)
+            sys.stdout = Output()
+            try:
+                result = function(*pargs, *kargs)
+                output = sys.stdout.text
+            finally:
+                sys.stdin, sys.stdout = savestreams
+            return (result, output)</p>
+<p>
 
-    <div class="ui middle aligned selection list">
+    /usr/fengzhe/streams/teststreams
+    def interact():
+        print('Hello stream world')
+        while True:
+            try:
+                reply = input('Enter a number>')
+            except E0FError:
+                break
+            else:
+                num = int(reply)
+                print("%d squared is %d" % (num, num ** 2))
+    
+    if __name__ == '__main__':
+        interact()</p>
+
+<p>代码如上，试试执行以下命令：
+    from redirect import redirect
+    (result, output) = redirect(interact, (), {}, '4\n5\n6\n')
+    print(result)
+    output
+
+    输出结果是什么？跟你预想的是否一致？为什么？</p>
+    <div class="ui horizontal divider">
+        Thank You For Reading
+    </div>
+    <!-- author box -->
+<div class="ui segment">
+    <div class="ui items">
         <div class="item">
-            <a class="header" href="/2018/05/streamstest.html">
-                反人类的重定向流
-                <small class="small-date">
-                    22 May 2018
-                     
-                </small>
+            <a class="ui circular tiny image">
+                <img src="/assets/img/profile.jpg">
             </a>
-            今天碰到一个非常烦人的重定向流语法案例，如下： /usr/fengzhe/streams/redirect.py import sys class Output(): def __init__(self): self.text = '' def write(self, string): self.text += string def writelines(self, lines): for line in lines: self.write(line) class Input(): def __init__(self, input=''):...
+            <div class="content">
+                <a class="header">冯喆</a>
+                <div class="description">
+                    <p>快来看，这里有一只菜鸟</p>
+                </div>
+            </div>
         </div>
     </div>
+</div>
+    <section class="disqus">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
 
-
-
-    <div class="ui middle aligned selection list">
-        <div class="item">
-            <a class="header" href="/2018/05/mysql%E9%A6%96%E6%AC%A1%E7%99%BB%E9%99%86.html">
-                mysql首次登陆
-                <small class="small-date">
-                    22 May 2018
-                     
-                </small>
-            </a>
-            
-    mysql首次启动 
-
-    
-
-
-    
-    如上图，mysql首次登陆需要输入密码，首次登陆密码我们并不知道，因为首次登陆mysql会随机生成密码，所以首次登陆我们应当：
-
-    
-
-
-
-    哒哒，登陆成功，BYE！
-
-        </div>
-    </div>
-
-
-
-    <div class="ui middle aligned selection list">
-        <div class="item">
-            <a class="header" href="/2018/05/my-first-blog.html">
-                我的第一份博客
-                <small class="small-date">
-                    21 May 2018
-                     
-                </small>
-            </a>
-            
-
-    很早之前就有搭建博客的想法，无奈懒癌晚期。网站搭建总共花费三天时间，一天半时间用于重装系统（各种出问题，一度以为电脑变砖 - -！），不过总归是搭建完成，期间用到的工具和资源有：jekyll、jekyll-theme、github、vs code。
-
-
-
-
-    以后每天晚上会写一篇博客，或多或少，一方面为了技术分享，一方面为了记录自己的学习和成长过程，欢迎前来吐槽，BYE！
-
-        </div>
-    </div>
-
-
-    <br/>
+        var disqus_shortname = 'fengzhe'; 
+        var disqus_developer = 0; // developer mode is on
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
 </div>
         </main>
     </div>
