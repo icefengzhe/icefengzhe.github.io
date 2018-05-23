@@ -5,8 +5,8 @@
     <description>Blog Of My Studies</description>
     <link>//</link>
     <atom:link href="//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 24 May 2018 00:03:31 +0800</pubDate>
-    <lastBuildDate>Thu, 24 May 2018 00:03:31 +0800</lastBuildDate>
+    <pubDate>Thu, 24 May 2018 00:22:53 +0800</pubDate>
+    <lastBuildDate>Thu, 24 May 2018 00:22:53 +0800</lastBuildDate>
     <generator>Jekyll v3.8.2</generator>
     
       <item>
@@ -39,7 +39,7 @@
                 res, self.text = self.text[:eoln+1], self.text[eoln+1:]
             return res
     
-        #def redirect(function, pargs, kargs, input):
+        def redirect(function, pargs, kargs, input):
             savestreams = sys.stdin, sys.stdout
             sys.stdin = Input(input)
             sys.stdout = Output()

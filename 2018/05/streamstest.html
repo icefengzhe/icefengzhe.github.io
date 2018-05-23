@@ -96,7 +96,7 @@
                 res, self.text = self.text[:eoln+1], self.text[eoln+1:]
             return res
     
-        #def redirect(function, pargs, kargs, input):
+        def redirect(function, pargs, kargs, input):
             savestreams = sys.stdin, sys.stdout
             sys.stdin = Input(input)
             sys.stdout = Output()
