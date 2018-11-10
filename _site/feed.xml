@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My Blogs</title>
+    <description>Blog Of My Studies</description>
+    <link>//</link>
+    <atom:link href="//feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 24 May 2018 00:22:53 +0800</pubDate>
+    <lastBuildDate>Thu, 24 May 2018 00:22:53 +0800</lastBuildDate>
+    <generator>Jekyll v3.8.2</generator>
+    
+      <item>
+        <title>反人类的重定向流</title>
+        <description>&lt;p&gt;今天碰到一个非常烦人的重定向流语法案例，如下：&lt;/p&gt;
+&lt;pre&gt;/usr/fengzhe/streams/redirect.py
+    import sys
+    
+    class Output():
+        def __init__(self):
+            self.text = ''
+        def write(self, string):
+            self.text += string
+        def writelines(self, lines):
+            for line in lines: self.write(line)
+    class Input():
+        def __init__(self, input=''):
+            self.text = input
+        def read(self, size=None):
+            if size == None:
+                res, self.text = self.text, ''
+            else:
+                res, self.text = self.text[:size], self.text[size:]
+            return res
+        def readline(self):
+            eoln = self.text.find('\n')
+            if eoln == -1:
+                res, self.text = self.text, ''
+            else:
+                res, self.text = self.text[:eoln+1], self.text[eoln+1:]
+            return res
+    
+        def redirect(function, pargs, kargs, input):
+            savestreams = sys.stdin, sys.stdout
+            sys.stdin = Input(input)
+            sys.stdout = Output()
+            try:
+                result = function(*pargs, *kargs)
+                output = sys.stdout.text
+            finally:
+                sys.stdin, sys.stdout = savestreams
+            return (result, output)&lt;/pre&gt;
+&lt;pre&gt;
+
+    /usr/fengzhe/streams/teststreams
+    def interact():
+        print('Hello stream world')
+        while True:
+            try:
+                reply = input('Enter a number&gt;')
+            except E0FError:
+                break
+            else:
+                num = int(reply)
+                print(&quot;%d squared is %d&quot; % (num, num ** 2))
+    
+    if __name__ == '__main__':
+        interact()&lt;/pre&gt;
+
+&lt;pre&gt;以上是所有代码，试试执行命令：
+    from redirect import redirect
+    (result, output) = redirect(interact, (), {}, '4\n5\n6\n')
+    print(result)
+    output
+
+输出结果是什么？跟你预想的是否一致？为什么？&lt;/pre&gt;</description>
+        <pubDate>Tue, 22 May 2018 00:00:00 +0800</pubDate>
+        <link>//2018/05/streamstest.html</link>
+        <guid isPermaLink="true">//2018/05/streamstest.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>mysql首次登陆</title>
+        <description>&lt;p&gt;
+    mysql首次启动 
+&lt;/p&gt;
+    
+&lt;img src=&quot;/assets/img/mysql_login.png&quot;  alt=&quot;首次启动&quot; /&gt;
+&lt;p&gt;
+    
+    如上图，mysql首次登陆需要输入密码，首次登陆密码我们并不知道，因为首次登陆mysql会随机生成密码，所以首次登陆我们应当：
+&lt;/p&gt;
+    
+&lt;img src=&quot;/assets/img/mysql_login_right.png&quot;  alt=&quot;首次启动&quot; /&gt;
+
+&lt;p&gt;
+    哒哒，登陆成功，BYE！
+&lt;/p&gt;</description>
+        <pubDate>Tue, 22 May 2018 00:00:00 +0800</pubDate>
+        <link>//2018/05/mysql%E9%A6%96%E6%AC%A1%E7%99%BB%E9%99%86.html</link>
+        <guid isPermaLink="true">//2018/05/mysql%E9%A6%96%E6%AC%A1%E7%99%BB%E9%99%86.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>我的第一份博客</title>
+        <description>&lt;p&gt;
+
+    很早之前就有搭建博客的想法，无奈懒癌晚期。网站搭建总共花费三天时间，一天半时间用于重装系统（各种出问题，一度以为电脑变砖 - -！），不过总归是搭建完成，期间用到的工具和资源有：jekyll、jekyll-theme、github、vs code。
+
+&lt;/p&gt;
+&lt;P&gt;
+
+    以后每天晚上会写一篇博客，或多或少，一方面为了技术分享，一方面为了记录自己的学习和成长过程，欢迎前来吐槽，BYE！
+&lt;/P&gt;</description>
+        <pubDate>Mon, 21 May 2018 00:00:00 +0800</pubDate>
+        <link>//2018/05/my-first-blog.html</link>
+        <guid isPermaLink="true">//2018/05/my-first-blog.html</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
