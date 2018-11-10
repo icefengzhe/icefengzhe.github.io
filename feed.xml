@@ -5,8 +5,8 @@
     <description>Blog Of My Studies</description>
     <link>//</link>
     <atom:link href="//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 24 May 2018 00:03:31 +0800</pubDate>
-    <lastBuildDate>Thu, 24 May 2018 00:03:31 +0800</lastBuildDate>
+    <pubDate>Thu, 24 May 2018 00:01:45 +0800</pubDate>
+    <lastBuildDate>Thu, 24 May 2018 00:01:45 +0800</lastBuildDate>
     <generator>Jekyll v3.8.2</generator>
     
       <item>
@@ -72,7 +72,7 @@
     print(result)
     output
 
-输出结果是什么？跟你预想的是否一致？为什么？&lt;/pre&gt;</description>
+    输出结果是什么？跟你预想的是否一致？为什么？&lt;/pre&gt;</description>
         <pubDate>Tue, 22 May 2018 00:00:00 +0800</pubDate>
         <link>//2018/05/streamstest.html</link>
         <guid isPermaLink="true">//2018/05/streamstest.html</guid>
